@@ -44,6 +44,40 @@ python train_lora_nfd.py
 Baseline NFD                   16.81%      60.39%
 Fine tuned                     5.35%      24.99%
 
-
+python train_eparchos.py
 python evaluate_baseline_nfd.py
 python evaluate_xf53.py
+
+python normalize_xf53_test.py
+
+# fine tune on xf53
+python extract_xf53_train_val.py
+python normalize_xf53_train_val.py
+python train_xf53.py
+python compare_models_nfd.py
+
+FINAL SUMMARY
+Model          Dataset                 CER         WER
+Base           EPARCHOS             16.81%      60.39%
+Base           XF53                 24.31%      81.35%
+EPARCHOS       EPARCHOS              5.35%      24.99%
+EPARCHOS       XF53                 24.29%      86.66%
+XF53           EPARCHOS             26.19%      82.69%
+XF53           XF53                  9.60%      45.73%
+
+# fine tune on both xf53 and eparchos
+python combine_datasets.py
+cat datasets/eparchos/training_nfd/val.lst datasets/XF53/val.lst > datasets/combined_val.lst
+python train_combined.py
+python compare_models_nfd.py
+
+FINAL SUMMARY
+Model          Dataset                 CER         WER
+Base           EPARCHOS             16.81%      60.39%
+Base           XF53                 24.31%      81.35%
+EPARCHOS       EPARCHOS              5.35%      24.99%
+EPARCHOS       XF53                 24.29%      86.66%
+XF53           EPARCHOS             26.19%      82.69%
+XF53           XF53                  9.60%      45.73%
+EPARCHOS+XF53  EPARCHOS              5.50%      25.99%
+EPARCHOS+XF53  XF53                  8.10%      40.14%

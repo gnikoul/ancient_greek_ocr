@@ -15,8 +15,8 @@ from kraken.lib.dataset import ImageInputTransforms
 BASE_MODEL = "/home/gnikoul/.local/share/htrmopo/a328a8d1-29fb-519a-bf81-3f56a512f080/ppocr_v6_tau090.safetensors"
 FINETUNED_MODEL = "models/eparchos_ppocrv6_nfd/best_0.9637.safetensors"
 
-TEST_DIR = Path("datasets/XF53/test")
-
+IMAGE_DIR = Path("datasets/XF53/test")
+LABEL_DIR = Path("datasets/XF53/test_normalized")
 
 def normalize(text):
     return unicodedata.normalize("NFD", text.strip())
@@ -91,14 +91,14 @@ def evaluate(model):
     total_word_errors = 0
     total_words = 0
 
-    image_paths = sorted(TEST_DIR.glob("*.png"))
+    image_paths = sorted(IMAGE_DIR.glob("*.png"))
 
     print(f"Test samples: {len(image_paths)}")
     print("Running recognition...\n")
 
     for i, image_path in enumerate(image_paths, 1):
 
-        label_path = image_path.with_suffix(".gt.txt")
+        label_path = LABEL_DIR / f"{image_path.stem}.gt.txt"
 
         if not label_path.exists():
             raise FileNotFoundError(

@@ -12,11 +12,53 @@ from kraken.configs import RecognitionInferenceConfig
 from kraken.lib.dataset import ImageInputTransforms
 
 
-BASE_MODEL = "/home/gnikoul/.local/share/htrmopo/a328a8d1-29fb-519a-bf81-3f56a512f080/ppocr_v6_tau090.safetensors"
-FINETUNED_MODEL = "models/eparchos_ppocrv6_nfd/best_0.9637.safetensors"
+# ============================================================
+# MODELS
+# ============================================================
 
-TEST_DIR = Path("datasets/eparchos/training_nfd/test")
+MODELS = {
+    "Base": (
+        "/home/gnikoul/.local/share/htrmopo/"
+        "a328a8d1-29fb-519a-bf81-3f56a512f080/"
+        "ppocr_v6_tau090.safetensors"
+    ),
 
+    "EPARCHOS": (
+        "models/eparchos_ppocrv6_nfd/"
+        "best_0.9637.safetensors"
+    ),
+
+    "XF53": (
+        "models/xf53_ppocrv6/"
+        "best_0.9040.safetensors"
+    ),
+    "EPARCHOS+XF53": (
+        "models/combined_ppocrv6/"
+        "best_0.8614.safetensors"
+    ),
+}
+
+
+# ============================================================
+# TEST DATASETS
+# ============================================================
+
+DATASETS = {
+    "EPARCHOS": {
+        "image_dir": Path("datasets/eparchos/training_nfd/test"),
+        "label_dir": Path("datasets/eparchos/training_nfd/test"),
+    },
+
+    "XF53": {
+        "image_dir": Path("datasets/XF53/test"),
+        "label_dir": Path("datasets/XF53/test_normalized"),
+    },
+}
+
+
+# ============================================================
+# HELPERS
+# ============================================================
 
 def normalize(text):
     return unicodedata.normalize("NFD", text.strip())
@@ -65,12 +107,19 @@ def load_model(model_path, name):
     return model
 
 
-def evaluate(model):
+# ============================================================
+# EVALUATION
+# ============================================================
 
-    results = []
-    
+def evaluate(model, dataset_name):
+
+    dataset = DATASETS[dataset_name]
+
+    image_dir = dataset["image_dir"]
+    label_dir = dataset["label_dir"]
+
     print("\n" + "=" * 70)
-    print("EVALUATING BASELINE ON NFD TEST SET")
+    print(f"EVALUATING ON {dataset_name.upper()} TEST SET")
     print("=" * 70)
 
     batch, channels, height, width = model.input
@@ -91,29 +140,30 @@ def evaluate(model):
     total_word_errors = 0
     total_words = 0
 
-    image_paths = sorted(TEST_DIR.glob("*.png"))
+    results = []
+
+    image_paths = sorted(image_dir.glob("*.png"))
 
     print(f"Test samples: {len(image_paths)}")
     print("Running recognition...\n")
 
     for i, image_path in enumerate(image_paths, 1):
 
-        label_path = image_path.with_suffix(".gt.txt")
+        label_path = label_dir / f"{image_path.stem}.gt.txt"
 
         if not label_path.exists():
             raise FileNotFoundError(
                 f"Missing label: {label_path}"
             )
 
-        # NFD reference
         reference = label_path.read_text(
             encoding="utf-8"
         )
+
         reference = normalize(reference)
 
         image = Image.open(image_path)
 
-        # Same preprocessing as all previous evaluations.
         with model._fabric.init_tensor():
             ts_im = transforms(image)
 
@@ -124,7 +174,6 @@ def evaluate(model):
             device=seqs.device,
         )
 
-        # Same recognition path as before.
         preds, olens = model._rec_predict(
             seqs,
             seq_lens,
@@ -135,12 +184,17 @@ def evaluate(model):
         )
 
         prediction = normalize(prediction)
+
         results.append({
             "image": image_path.name,
             "reference": reference,
             "prediction": prediction,
         })
+
+        # ----------------------------------------------------
         # CER
+        # ----------------------------------------------------
+
         char_errors = edit_distance(
             reference,
             prediction,
@@ -148,7 +202,13 @@ def evaluate(model):
 
         char_count = len(reference)
 
+        total_char_errors += char_errors
+        total_chars += char_count
+
+        # ----------------------------------------------------
         # WER
+        # ----------------------------------------------------
+
         ref_words = reference.split()
         pred_words = prediction.split()
 
@@ -159,21 +219,17 @@ def evaluate(model):
 
         word_count = len(ref_words)
 
-        total_char_errors += char_errors
-        total_chars += char_count
-
         total_word_errors += word_errors
         total_words += word_count
 
         if i % 25 == 0:
             print(f"Processed {i}/{len(image_paths)}")
-            
 
     cer = total_char_errors / total_chars
     wer = total_word_errors / total_words
 
     print("\n" + "=" * 60)
-    print("BASELINE NFD RESULTS")
+    print(f"{dataset_name.upper()} RESULTS")
     print("=" * 60)
 
     print(f"Characters:       {total_chars}")
@@ -185,101 +241,137 @@ def evaluate(model):
     print(f"Word errors:      {total_word_errors}")
     print(f"WER:              {wer:.4f} ({wer * 100:.2f}%)")
 
-    print("\n" + "=" * 60)
-    print("COMPARISON")
-    print("=" * 60)
+    return {
+        "results": results,
+        "cer": cer,
+        "wer": wer,
+        "char_errors": total_char_errors,
+        "chars": total_chars,
+        "word_errors": total_word_errors,
+        "words": total_words,
+    }
 
-    print(
-        f"{'Model':<25}"
-        f"{'CER':>12}"
-        f"{'WER':>12}"
-    )
 
-    print("-" * 50)
+# ============================================================
+# MODEL COMPARISON
+# ============================================================
 
-    print(
-        f"{'Baseline NFD':<25}"
-        f"{cer * 100:>11.2f}%"
-        f"{wer * 100:>11.2f}%"
-    )
-    return results
-
-def compare_predictions(baseline_results, finetuned_results):
+def compare_predictions(
+    baseline_results,
+    comparison_results,
+    baseline_name,
+    comparison_name,
+):
 
     fixed_errors = []
     broken_errors = []
 
-    for base, ft in zip(baseline_results, finetuned_results):
+    for base, comp in zip(
+        baseline_results,
+        comparison_results,
+    ):
 
         reference = base["reference"]
+
         base_prediction = base["prediction"]
-        ft_prediction = ft["prediction"]
+        comp_prediction = comp["prediction"]
 
-        base_distance = edit_distance(reference, base_prediction)
-        ft_distance = edit_distance(reference, ft_prediction)
+        base_distance = edit_distance(
+            reference,
+            base_prediction,
+        )
 
-        if ft_distance < base_distance:
+        comp_distance = edit_distance(
+            reference,
+            comp_prediction,
+        )
+
+        if comp_distance < base_distance:
+
             fixed_errors.append({
                 "image": base["image"],
                 "reference": reference,
                 "baseline": base_prediction,
-                "finetuned": ft_prediction,
+                "comparison": comp_prediction,
                 "baseline_errors": base_distance,
-                "finetuned_errors": ft_distance,
+                "comparison_errors": comp_distance,
             })
 
-        elif ft_distance > base_distance:
+        elif comp_distance > base_distance:
+
             broken_errors.append({
                 "image": base["image"],
                 "reference": reference,
                 "baseline": base_prediction,
-                "finetuned": ft_prediction,
+                "comparison": comp_prediction,
                 "baseline_errors": base_distance,
-                "finetuned_errors": ft_distance,
+                "comparison_errors": comp_distance,
             })
 
     print("\n" + "=" * 70)
-    print("ERROR REDUCTION BY IMAGE")
+    print(f"{baseline_name} → {comparison_name}")
     print("=" * 70)
 
     print(f"Images improved:  {len(fixed_errors)}")
     print(f"Images worsened:  {len(broken_errors)}")
 
     total_fixed = sum(
-        x["baseline_errors"] - x["finetuned_errors"]
+        x["baseline_errors"] - x["comparison_errors"]
         for x in fixed_errors
     )
 
     total_broken = sum(
-        x["finetuned_errors"] - x["baseline_errors"]
+        x["comparison_errors"] - x["baseline_errors"]
         for x in broken_errors
     )
 
     print(f"Errors eliminated: {total_fixed}")
     print(f"Errors introduced:  {total_broken}")
-def print_best_improvements(baseline_results, finetuned_results, n=20):
+
+
+def print_best_improvements(
+    baseline_results,
+    comparison_results,
+    baseline_name,
+    comparison_name,
+    n=10,
+):
 
     improvements = []
 
-    for base, ft in zip(baseline_results, finetuned_results):
+    for base, comp in zip(
+        baseline_results,
+        comparison_results,
+    ):
 
         reference = base["reference"]
+
         baseline = base["prediction"]
-        finetuned = ft["prediction"]
+        comparison = comp["prediction"]
 
-        baseline_errors = edit_distance(reference, baseline)
-        finetuned_errors = edit_distance(reference, finetuned)
+        baseline_errors = edit_distance(
+            reference,
+            baseline,
+        )
 
-        improvement = baseline_errors - finetuned_errors
+        comparison_errors = edit_distance(
+            reference,
+            comparison,
+        )
+
+        improvement = (
+            baseline_errors - comparison_errors
+        )
 
         if improvement > 0:
+
             improvements.append({
                 "image": base["image"],
                 "reference": reference,
                 "baseline": baseline,
-                "finetuned": finetuned,
+                "comparison": comparison,
                 "baseline_errors": baseline_errors,
-                "finetuned_errors": finetuned_errors,
+                "comparison_errors": comparison_errors,
                 "improvement": improvement,
             })
 
@@ -289,83 +381,142 @@ def print_best_improvements(baseline_results, finetuned_results, n=20):
     )
 
     print("\n" + "=" * 70)
-    print(f"TOP {n} IMPROVEMENTS")
+    print(
+        f"TOP {n} IMPROVEMENTS: "
+        f"{baseline_name} → {comparison_name}"
+    )
     print("=" * 70)
 
-    for rank, item in enumerate(improvements[:n], 1):
+    for rank, item in enumerate(
+        improvements[:n],
+        1,
+    ):
 
         print("\n" + "-" * 70)
+
         print(
             f"#{rank}  {item['image']}  "
             f"({item['baseline_errors']} → "
-            f"{item['finetuned_errors']} errors, "
+            f"{item['comparison_errors']} errors, "
             f"-{item['improvement']})"
         )
 
         print("\nREFERENCE:")
         print(item["reference"])
 
-        print("\nBASELINE:")
+        print(f"\n{baseline_name.upper()}:")
         print(item["baseline"])
 
-        print("\nFINE-TUNED:")
-        print(item["finetuned"])
+        print(f"\n{comparison_name.upper()}:")
+        print(item["comparison"])
+
+
+# ============================================================
+# SUMMARY TABLE
+# ============================================================
+
+def print_summary(all_results):
+
+    print("\n\n" + "=" * 80)
+    print("FINAL SUMMARY")
+    print("=" * 80)
+
+    print(
+        f"{'Model':<15}"
+        f"{'Dataset':<15}"
+        f"{'CER':>12}"
+        f"{'WER':>12}"
+    )
+
+    print("-" * 54)
+
+    for model_name in MODELS:
+
+        for dataset_name in DATASETS:
+
+            result = all_results[
+                model_name
+            ][dataset_name]
+
+            print(
+                f"{model_name:<15}"
+                f"{dataset_name:<15}"
+                f"{result['cer'] * 100:>11.2f}%"
+                f"{result['wer'] * 100:>11.2f}%"
+            )
+
+
+# ============================================================
+# MAIN
+# ============================================================
+
 def main():
 
-    baseline = load_model(BASE_MODEL, "pretrained baseline")
-    baseline_results = evaluate(baseline)
+    all_results = {}
 
-    del baseline
-    torch.cuda.empty_cache()
+    for model_name, model_path in MODELS.items():
 
-    finetuned = load_model(FINETUNED_MODEL, "fine-tuned")
-    finetuned_results = evaluate(finetuned)
+        all_results[model_name] = {}
 
-    del finetuned
-    torch.cuda.empty_cache()
-    
-    print("\n" + "=" * 70)
-    print("SAMPLE-BY-SAMPLE COMPARISON")
-    print("=" * 70)
+        model = load_model(
+            model_path,
+            model_name,
+        )
 
-    baseline_correct = 0
-    finetuned_correct = 0
-    baseline_fixed = 0
-    baseline_broken = 0
+        for dataset_name in DATASETS:
 
-    for base, ft in zip(baseline_results, finetuned_results):
+            all_results[model_name][dataset_name] = (
+                evaluate(
+                    model,
+                    dataset_name,
+                )
+            )
 
-        reference = base["reference"]
+        del model
+        torch.cuda.empty_cache()
 
-        base_correct = base["prediction"] == reference
-        ft_correct = ft["prediction"] == reference
+    # --------------------------------------------------------
+    # Comparisons
+    # --------------------------------------------------------
 
-        baseline_correct += base_correct
-        finetuned_correct += ft_correct
+    for dataset_name in DATASETS:
 
-        if not base_correct and ft_correct:
-            baseline_fixed += 1
+        print("\n\n" + "=" * 80)
+        print(f"COMPARISONS ON {dataset_name.upper()}")
+        print("=" * 80)
 
-        if base_correct and not ft_correct:
-            baseline_broken += 1
+        base_results = all_results["Base"][dataset_name]["results"]
 
-    print(f"Baseline exact matches:  {baseline_correct}/{len(baseline_results)}")
-    print(f"Fine-tuned exact matches: {finetuned_correct}/{len(finetuned_results)}")
-    print()
-    print(f"Baseline wrong → FT correct: {baseline_fixed}")
-    print(f"Baseline correct → FT wrong: {baseline_broken}")
-    
-    compare_predictions(
-        baseline_results,
-        finetuned_results,
-    )
-    print_best_improvements(
-        baseline_results,
-        finetuned_results,
-        n=20,
-    )
+        for comparison_name in [
+            "EPARCHOS",
+            "XF53",
+        ]:
+
+            comparison_results = all_results[
+                comparison_name
+            ][dataset_name]["results"]
+
+            compare_predictions(
+                base_results,
+                comparison_results,
+                "Base",
+                comparison_name,
+            )
+
+        # Direct EPARCHOS vs XF53 comparison
+        compare_predictions(
+            all_results["EPARCHOS"][dataset_name]["results"],
+            all_results["XF53"][dataset_name]["results"],
+            "EPARCHOS",
+            "XF53",
+        )
+
+    # --------------------------------------------------------
+    # Summary
+    # --------------------------------------------------------
+
+    print_summary(all_results)
 
 
 if __name__ == "__main__":
     main()
-
