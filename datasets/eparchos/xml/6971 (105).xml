@@ -1,0 +1,1027 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PcGts xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schema.primaresearch.org/PAGE/gts/pagecontent/2013-07-15">
+  <Metadata>
+    <Creator>Transpro</Creator>
+    <Created>2019-10-16T21:00:00Z</Created>
+    <LastChange>0001-01-01T00:00:00</LastChange>
+  </Metadata>
+  <Page imageFilename="6971 (105).png" imageWidth="599" imageHeight="753">
+    <TextRegion id="r0">
+      <Coords points="16,24 576,24 576,729 16,729" />
+      <TextLine id="r0l0">
+        <Coords points="42,24 497,24 497,65 42,65" />
+        <Word id="r0l0w2">
+          <Coords points="42,41 83,41 83,65 42,65" />
+          <TextEquiv>
+            <Unicode>σῶμα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l0w3">
+          <Coords points="89,31 144,31 144,56 89,56" />
+          <TextEquiv>
+            <Unicode>δεῖσθαι</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l0w4">
+          <Coords points="147,35 226,35 226,57 147,57" />
+          <TextEquiv>
+            <Unicode>πέφυκεν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l0w5">
+          <Coords points="241,27 285,27 285,59 241,59" />
+          <TextEquiv>
+            <Unicode>ἄχρις</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l0w6">
+          <Coords points="294,24 319,24 319,56 294,56" />
+          <TextEquiv>
+            <Unicode>οὖν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l0w7">
+          <Coords points="331,25 394,25 394,50 331,50" />
+          <TextEquiv>
+            <Unicode>πιόντων</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l0w8">
+          <Coords points="401,29 497,29 497,50 401,50" />
+          <TextEquiv>
+            <Unicode>ἀναρρωσθὲν</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>σῶμα δεῖσθαι πέφυκεν ἄχρις οὖν πιόντων ἀναρρωσθὲν</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l1">
+        <Coords points="40,62 473,62 473,105 40,105" />
+        <Word id="r0l1w9">
+          <Coords points="40,81 73,81 73,105 40,105" />
+          <TextEquiv>
+            <Unicode>καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l1w10">
+          <Coords points="78,74 134,74 134,98 78,98" />
+          <TextEquiv>
+            <Unicode>ἰσχύσαν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l1w11">
+          <Coords points="135,71 159,71 159,91 135,91" />
+          <TextEquiv>
+            <Unicode>τὸ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l1w12">
+          <Coords points="160,69 225,69 225,96 160,96" />
+          <TextEquiv>
+            <Unicode>θεμὸν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l1w13">
+          <Coords points="240,65 331,65 331,93 240,93" />
+          <TextEquiv>
+            <Unicode>ἐμβριθοῦς</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l1w14">
+          <Coords points="336,67 403,67 403,91 336,91" />
+          <TextEquiv>
+            <Unicode>τροφῆς</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l1w15">
+          <Coords points="410,62 473,62 473,91 410,91" />
+          <TextEquiv>
+            <Unicode>ὄρεξιν</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>καὶ ἰσχύσαν τὸ θεμὸν ἐμβριθοῦς τροφῆς ὄρεξιν</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l2">
+        <Coords points="48,102 479,102 479,135 48,135" />
+        <Word id="r0l2w16">
+          <Coords points="48,113 116,113 116,135 48,135" />
+          <TextEquiv>
+            <Unicode>ἐργάσηται.</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l2w17">
+          <Coords points="134,112 154,112 154,133 134,133" />
+          <TextEquiv>
+            <Unicode>Τὸ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l2w18">
+          <Coords points="159,105 187,105 187,133 159,133" />
+          <TextEquiv>
+            <Unicode>γὰρ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l2w19">
+          <Coords points="196,109 217,109 217,129 196,129" />
+          <TextEquiv>
+            <Unicode>ἐν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l2w20">
+          <Coords points="224,102 270,102 270,130 224,130" />
+          <TextEquiv>
+            <Unicode>ἡμῖν,</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l2w21">
+          <Coords points="278,104 341,104 341,133 278,133" />
+          <TextEquiv>
+            <Unicode>μάλιστα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l2w22">
+          <Coords points="347,102 393,102 393,127 347,127" />
+          <TextEquiv>
+            <Unicode>δεῖται</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l2w23">
+          <Coords points="396,104 457,104 457,128 396,128" />
+          <TextEquiv>
+            <Unicode>τροφῆς</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l2w24">
+          <Coords points="461,104 479,104 479,125 461,125" />
+          <TextEquiv>
+            <Unicode>τὸ</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>ἐργάσηται. Τὸ γὰρ ἐν ἡμῖν, μάλιστα δεῖται τροφῆς τὸ</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l3">
+        <Coords points="41,139 479,139 479,172 41,172" />
+        <Word id="r0l3w25">
+          <Coords points="41,151 103,151 103,170 41,170" />
+          <TextEquiv>
+            <Unicode>θερμὸν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l3w26">
+          <Coords points="122,143 173,143 173,172 122,172" />
+          <TextEquiv>
+            <Unicode>ὥσπερ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l3w27">
+          <Coords points="179,145 243,145 243,167 179,167" />
+          <TextEquiv>
+            <Unicode>ἀμέλει</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l3w28">
+          <Coords points="248,144 341,144 341,164 248,164" />
+          <TextEquiv>
+            <Unicode>βλέπωμεν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l3w29">
+          <Coords points="345,139 375,139 375,167 345,167" />
+          <TextEquiv>
+            <Unicode>ἔξω</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l3w30">
+          <Coords points="392,139 426,139 426,159 392,159" />
+          <TextEquiv>
+            <Unicode>μήτε</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l3w31">
+          <Coords points="427,141 479,141 479,161 427,161" />
+          <TextEquiv>
+            <Unicode>ἀέρα</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>θερμὸν ὥσπερ ἀμέλει βλέπωμεν ἔξω μήτε ἀέρα</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l4">
+        <Coords points="43,175 489,175 489,212 43,212" />
+        <Word id="r0l4w32">
+          <Coords points="43,186 73,186 73,212 43,212" />
+          <TextEquiv>
+            <Unicode>μήτε</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l4w33">
+          <Coords points="83,187 122,187 122,207 83,207" />
+          <TextEquiv>
+            <Unicode>ὕδωρ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l4w34">
+          <Coords points="134,181 173,181 173,202 134,202" />
+          <TextEquiv>
+            <Unicode>μήτε</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l4w35">
+          <Coords points="178,181 199,181 199,201 178,201" />
+          <TextEquiv>
+            <Unicode>γῆν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l4w36">
+          <Coords points="206,182 299,182 299,202 206,202" />
+          <TextEquiv>
+            <Unicode>ἐφιέμενα,</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l4w37">
+          <Coords points="306,177 398,177 398,202 306,202" />
+          <TextEquiv>
+            <Unicode>τρέφαισθαι</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l4w38">
+          <Coords points="418,175 455,175 455,198 418,198" />
+          <TextEquiv>
+            <Unicode>μήτε</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l4w39">
+          <Coords points="460,176 489,176 489,194 460,194" />
+          <TextEquiv>
+            <Unicode>ἀνα-</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>μήτε ὕδωρ μήτε γῆν ἐφιέμενα, τρέφαισθαι μήτε ἀνα-</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l5">
+        <Coords points="44,209 496,209 496,248 44,248" />
+        <Word id="r0l5w40">
+          <Coords points="44,222 116,222 116,248 44,248" />
+          <TextEquiv>
+            <Unicode>λίσκοντα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l5w41">
+          <Coords points="121,221 142,221 142,240 121,240" />
+          <TextEquiv>
+            <Unicode>τὸ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l5w42">
+          <Coords points="145,217 238,217 238,241 145,241" />
+          <TextEquiv>
+            <Unicode>πλησιάζον</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l5w43">
+          <Coords points="257,217 296,217 296,243 257,243" />
+          <TextEquiv>
+            <Unicode>ἀλλὰ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l5w44">
+          <Coords points="297,215 350,215 350,236 297,236" />
+          <TextEquiv>
+            <Unicode>μόνον</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l5w45">
+          <Coords points="352,217 364,217 364,235 352,235" />
+          <TextEquiv>
+            <Unicode>τὸ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l5w46">
+          <Coords points="375,211 402,211 402,242 375,242" />
+          <TextEquiv>
+            <Unicode>πῦρ.</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l5w47">
+          <Coords points="418,211 447,211 447,234 418,234" />
+          <TextEquiv>
+            <Unicode>Διὰ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l5w48">
+          <Coords points="448,209 496,209 496,232 448,232" />
+          <TextEquiv>
+            <Unicode>ταῦτα</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>λίσκοντα τὸ πλησιάζον ἀλλὰ μόνον τὸ πῦρ. Διὰ ταῦτα</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l6">
+        <Coords points="48,249 482,249 482,287 48,287" />
+        <Word id="r0l6w49">
+          <Coords points="48,275 69,275 69,287 48,287" />
+          <TextEquiv>
+            <Unicode>καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l6w50">
+          <Coords points="80,265 91,265 91,281 80,281" />
+          <TextEquiv>
+            <Unicode>οἰ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l6w51">
+          <Coords points="100,259 173,259 173,285 100,285" />
+          <TextEquiv>
+            <Unicode>γέροντες,</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l6w52">
+          <Coords points="183,260 229,260 229,279 183,279" />
+          <TextEquiv>
+            <Unicode>ῥᾶστα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l6w53">
+          <Coords points="237,257 294,257 294,277 237,277" />
+          <TextEquiv>
+            <Unicode>νηστείαν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l6w54">
+          <Coords points="302,255 383,255 383,279 302,279" />
+          <TextEquiv>
+            <Unicode>φέρουσι,</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l6w55">
+          <Coords points="390,254 447,254 447,274 390,274" />
+          <TextEquiv>
+            <Unicode>ἀμβλὺ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l6w56">
+          <Coords points="455,249 482,249 482,273 455,273" />
+          <TextEquiv>
+            <Unicode>γὰρ</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>καὶ οἰ γέροντες, ῥᾶστα νηστείαν φέρουσι, ἀμβλὺ γὰρ</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l7">
+        <Coords points="47,283 484,283 484,327 47,327" />
+        <Word id="r0l7w57">
+          <Coords points="47,299 65,299 65,327 47,327" />
+          <TextEquiv>
+            <Unicode>ἐν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l7w58">
+          <Coords points="74,297 121,297 121,316 74,316" />
+          <TextEquiv>
+            <Unicode>αὐτοῖς</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l7w59">
+          <Coords points="130,297 158,297 158,318 130,318" />
+          <TextEquiv>
+            <Unicode>καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l7w60">
+          <Coords points="163,304 226,304 226,318 163,318" />
+          <TextEquiv>
+            <Unicode>μικρὸν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l7w61">
+          <Coords points="234,291 261,291 261,312 234,312" />
+          <TextEquiv>
+            <Unicode>ἤδη</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l7w62">
+          <Coords points="266,291 285,291 285,312 266,312" />
+          <TextEquiv>
+            <Unicode>τὸ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l7w63">
+          <Coords points="286,286 352,286 352,315 286,315" />
+          <TextEquiv>
+            <Unicode>θερμὸν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l7w64">
+          <Coords points="359,292 384,292 384,312 359,312" />
+          <TextEquiv>
+            <Unicode>ἐστί.</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l7w65">
+          <Coords points="399,288 427,288 427,311 399,311" />
+          <TextEquiv>
+            <Unicode>Καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l7w66">
+          <Coords points="431,287 455,287 455,307 431,307" />
+          <TextEquiv>
+            <Unicode>τὰ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l7w67">
+          <Coords points="459,283 484,283 484,306 459,306" />
+          <TextEquiv>
+            <Unicode>ἄνε-</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>ἐν αὐτοῖς καὶ μικρὸν ἤδη τὸ θερμὸν ἐστί. Καὶ τὰ ἄνε-</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l8">
+        <Coords points="43,326 485,326 485,362 43,362" />
+        <Word id="r0l8w68">
+          <Coords points="43,344 71,344 71,362 43,362" />
+          <TextEquiv>
+            <Unicode>μα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l8w69">
+          <Coords points="76,339 91,339 91,354 76,354" />
+          <TextEquiv>
+            <Unicode>δὲ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l8w70">
+          <Coords points="98,336 128,336 128,354 98,354" />
+          <TextEquiv>
+            <Unicode>τῶν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l8w71">
+          <Coords points="138,334 188,334 188,357 138,357" />
+          <TextEquiv>
+            <Unicode>ζώων,</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l8w72">
+          <Coords points="193,334 253,334 253,358 193,358" />
+          <TextEquiv>
+            <Unicode>τροφῆς</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l8w73">
+          <Coords points="259,328 312,328 312,351 259,351" />
+          <TextEquiv>
+            <Unicode>ἥκιστα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l8w74">
+          <Coords points="322,330 417,330 417,354 322,354" />
+          <TextEquiv>
+            <Unicode>προσδεῖται</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l8w75">
+          <Coords points="427,331 445,331 445,358 427,358" />
+          <TextEquiv>
+            <Unicode>δι᾽</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l8w76">
+          <Coords points="446,326 485,326 485,346 446,346" />
+          <TextEquiv>
+            <Unicode>ἔνδι-</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>μα δὲ τῶν ζώων, τροφῆς ἥκιστα προσδεῖται δι᾽ ἔνδι-</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l9">
+        <Coords points="40,361 500,361 500,394 40,394" />
+        <Word id="r0l9w77">
+          <Coords points="40,379 65,379 65,394 40,394" />
+          <TextEquiv>
+            <Unicode>αν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l9w78">
+          <Coords points="70,366 184,366 184,393 70,393" />
+          <TextEquiv>
+            <Unicode>θερμότητος:-</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l9w79">
+          <Coords points="241,370 299,370 299,391 241,391" />
+          <TextEquiv>
+            <Unicode>Διατί</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l9w80">
+          <Coords points="308,364 324,364 324,385 308,385" />
+          <TextEquiv>
+            <Unicode>οἱ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l9w81">
+          <Coords points="332,361 438,361 438,393 332,393" />
+          <TextEquiv>
+            <Unicode>πεινόντες</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l9w82">
+          <Coords points="439,362 500,362 500,393 439,393" />
+          <TextEquiv>
+            <Unicode>ἐὰν</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>αν θερμότητος:-  Διατί οἱ πεινόντες ἐὰν</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l10">
+        <Coords points="46,401 505,401 505,428 46,428" />
+        <Word id="r0l10w83">
+          <Coords points="46,411 90,411 90,426 46,426" />
+          <TextEquiv>
+            <Unicode>πίωσι</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l10w84">
+          <Coords points="100,402 168,402 168,428 100,428" />
+          <TextEquiv>
+            <Unicode>παύονται,</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l10w85">
+          <Coords points="176,401 264,401 264,428 176,428" />
+          <TextEquiv>
+            <Unicode>διψῶντες</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l10w86">
+          <Coords points="270,401 283,401 283,427 270,427" />
+          <TextEquiv>
+            <Unicode>δὲ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l10w87">
+          <Coords points="289,401 324,401 324,423 289,423" />
+          <TextEquiv>
+            <Unicode>ἐὰν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l10w88">
+          <Coords points="330,401 413,401 413,428 330,428" />
+          <TextEquiv>
+            <Unicode>φάγωσιν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l10w89">
+          <Coords points="414,401 505,401 505,419 414,419" />
+          <TextEquiv>
+            <Unicode>ἐπιτείνονται:-</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>πίωσι παύονται, διψῶντες δὲ ἐὰν φάγωσιν ἐπιτείνονται:-             </Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l11">
+        <Coords points="16,421 576,421 576,467 16,467" />
+        <Word id="r0l11w90">
+          <Coords points="13,416 41,416 41,481 13,481" />
+          <TextEquiv>
+            <Unicode>Ἡ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l11w91">
+          <Coords points="49,441 91,441 91,466 49,466" />
+          <TextEquiv>
+            <Unicode>δίψα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l11w92">
+          <Coords points="99,447 125,447 125,466 99,466" />
+          <TextEquiv>
+            <Unicode>τοῖς</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l11w93">
+          <Coords points="137,447 213,447 213,467 137,467" />
+          <TextEquiv>
+            <Unicode>φαγοῦσι</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l11w94">
+          <Coords points="221,442 309,442 309,463 221,463" />
+          <TextEquiv>
+            <Unicode>ἐπιτίνεται</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l11w95">
+          <Coords points="327,441 370,441 370,459 327,459" />
+          <TextEquiv>
+            <Unicode>διότι</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l11w96">
+          <Coords points="377,440 402,440 402,458 377,458" />
+          <TextEquiv>
+            <Unicode>τὰ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l11w97">
+          <Coords points="406,437 488,437 488,460 406,460" />
+          <TextEquiv>
+            <Unicode>εἰσερχόμε-</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l11w98">
+          <Coords points="537,421 576,421 576,456 537,456" />
+          <TextEquiv>
+            <Unicode>ρκζ´.</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>Ἡ δίψα τοῖς φαγοῦσι ἐπιτίνεται διότι τὰ εἰσερχόμε-           ρκζ´.</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l12">
+        <Coords points="50,477 487,477 487,506 50,506" />
+        <Word id="r0l12w99">
+          <Coords points="50,495 69,495 69,506 50,506" />
+          <TextEquiv>
+            <Unicode>να</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l12w100">
+          <Coords points="78,484 115,484 115,503 78,503" />
+          <TextEquiv>
+            <Unicode>σιτία,</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l12w101">
+          <Coords points="120,485 148,485 148,506 120,506" />
+          <TextEquiv>
+            <Unicode>τῇ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l12w102">
+          <Coords points="152,481 223,481 223,506 152,506" />
+          <TextEquiv>
+            <Unicode>ξηρότητι</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l12w103">
+          <Coords points="235,479 368,479 368,503 235,503" />
+          <TextEquiv>
+            <Unicode>διεσπαρμένον</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l12w104">
+          <Coords points="376,485 414,485 414,504 376,504" />
+          <TextEquiv>
+            <Unicode>ὑγρὸν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l12w105">
+          <Coords points="423,477 448,477 448,497 423,497" />
+          <TextEquiv>
+            <Unicode>καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l12w106">
+          <Coords points="453,477 487,477 487,490 453,490" />
+          <TextEquiv>
+            <Unicode>ἀπο-</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>να σιτία, τῇ ξηρότητι διεσπαρμένον ὑγρὸν καὶ ἀπο-</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l13">
+        <Coords points="46,512 504,512 504,540 46,540" />
+        <Word id="r0l13w107">
+          <Coords points="46,520 113,520 113,540 46,540" />
+          <TextEquiv>
+            <Unicode>λείμενον</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l13w108">
+          <Coords points="124,514 191,514 191,539 124,539" />
+          <TextEquiv>
+            <Unicode>ἀσθενὲς</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l13w109">
+          <Coords points="198,516 227,516 227,539 198,539" />
+          <TextEquiv>
+            <Unicode>καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l13w110">
+          <Coords points="229,516 281,516 281,540 229,540" />
+          <TextEquiv>
+            <Unicode>ὀλίγον</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l13w111">
+          <Coords points="290,518 311,518 311,537 290,537" />
+          <TextEquiv>
+            <Unicode>ἐν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l13w112">
+          <Coords points="313,514 337,514 337,539 313,539" />
+          <TextEquiv>
+            <Unicode>τῷ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l13w113">
+          <Coords points="343,513 413,513 413,536 343,536" />
+          <TextEquiv>
+            <Unicode>σώματι,</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l13w114">
+          <Coords points="420,512 504,512 504,535 420,535" />
+          <TextEquiv>
+            <Unicode>συλλέγουσι</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>λείμενον ἀσθενὲς καὶ ὀλίγον ἐν τῷ σώματι, συλλέγουσι</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l14">
+        <Coords points="50,542 480,542 480,584 50,584" />
+        <Word id="r0l14w115">
+          <Coords points="50,570 75,570 75,583 50,583" />
+          <TextEquiv>
+            <Unicode>καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l14w116">
+          <Coords points="84,561 229,561 229,582 84,582" />
+          <TextEquiv>
+            <Unicode>προεξηκμάζουσι</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l14w117">
+          <Coords points="249,554 291,554 291,571 249,571" />
+          <TextEquiv>
+            <Unicode>διότι</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l14w118">
+          <Coords points="300,554 312,554 312,572 300,572" />
+          <TextEquiv>
+            <Unicode>ἡ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l14w119">
+          <Coords points="315,550 368,550 368,581 315,581" />
+          <TextEquiv>
+            <Unicode>ὑγρότης</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l14w120">
+          <Coords points="373,550 401,550 401,584 373,584" />
+          <TextEquiv>
+            <Unicode>τὰ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l14w121">
+          <Coords points="405,544 480,544 480,584 405,584" />
+          <TextEquiv>
+            <Unicode>ὑπόντα</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>καὶ προεξηκμάζουσι διότι ἡ ὑγρότης τὰ ὑπόντα</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l15">
+        <Coords points="50,586 492,586 492,619 50,619" />
+        <Word id="r0l15w122">
+          <Coords points="50,596 90,596 90,615 50,615" />
+          <TextEquiv>
+            <Unicode>σιτία</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l15w123">
+          <Coords points="99,590 174,590 174,619 99,619" />
+          <TextEquiv>
+            <Unicode>βρέξασα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l15w124">
+          <Coords points="186,602 212,602 212,614 186,614" />
+          <TextEquiv>
+            <Unicode>καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l15w125">
+          <Coords points="219,590 299,590 299,616 219,616" />
+          <TextEquiv>
+            <Unicode>διαχέουσα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l15w126">
+          <Coords points="313,587 382,587 382,614 313,614" />
+          <TextEquiv>
+            <Unicode>χυμῶν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l15w127">
+          <Coords points="391,586 492,586 492,608 391,608" />
+          <TextEquiv>
+            <Unicode>ἐγγινομένων</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>σιτία βρέξασα καὶ διαχέουσα χυμῶν ἐγγινομένων</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l16">
+        <Coords points="52,621 496,621 496,652 52,652" />
+        <Word id="r0l16w128">
+          <Coords points="52,644 74,644 74,652 52,652" />
+          <TextEquiv>
+            <Unicode>καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l16w129">
+          <Coords points="80,633 138,633 138,652 80,652" />
+          <TextEquiv>
+            <Unicode>ἀτμῶν,</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l16w130">
+          <Coords points="152,630 241,630 241,652 152,652" />
+          <TextEquiv>
+            <Unicode>ἀναφέρει</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l16w131">
+          <Coords points="245,630 295,630 295,651 245,651" />
+          <TextEquiv>
+            <Unicode>τούτοις</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l16w132">
+          <Coords points="301,632 319,632 319,649 301,649" />
+          <TextEquiv>
+            <Unicode>εἰς</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l16w133">
+          <Coords points="320,630 333,630 333,647 320,647" />
+          <TextEquiv>
+            <Unicode>τὸ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l16w134">
+          <Coords points="340,628 388,628 388,649 340,649" />
+          <TextEquiv>
+            <Unicode>σῶμα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l16w135">
+          <Coords points="405,635 430,635 430,647 405,647" />
+          <TextEquiv>
+            <Unicode>καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l16w136">
+          <Coords points="437,621 496,621 496,645 437,645" />
+          <TextEquiv>
+            <Unicode>προστί-</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>καὶ ἀτμῶν, ἀναφέρει τούτοις εἰς τὸ σῶμα καὶ προστί-</Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l17">
+        <Coords points="50,654 498,654 498,689 50,689" />
+        <Word id="r0l17w137">
+          <Coords points="50,654 89,654 89,689 50,689" />
+          <TextEquiv>
+            <Unicode>θησι</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l17w138">
+          <Coords points="100,671 125,671 125,689 100,689" />
+          <TextEquiv>
+            <Unicode>τοῖς</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l17w139">
+          <Coords points="137,669 217,669 217,686 137,686" />
+          <TextEquiv>
+            <Unicode>θεομένοις.</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l17w140">
+          <Coords points="239,665 334,665 334,687 239,687" />
+          <TextEquiv>
+            <Unicode>Ἐνδυομένη</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l17w141">
+          <Coords points="335,661 367,661 367,684 335,684" />
+          <TextEquiv>
+            <Unicode>γὰρ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l17w142">
+          <Coords points="375,656 436,656 436,686 375,686" />
+          <TextEquiv>
+            <Unicode>ἔξωθεν</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l17w143">
+          <Coords points="443,660 452,660 452,677 443,677" />
+          <TextEquiv>
+            <Unicode>ἡ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l17w144">
+          <Coords points="457,655 498,655 498,684 457,684" />
+          <TextEquiv>
+            <Unicode>ὑγρό-</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>θησι τοῖς θεομένοις. Ἐνδυομένη γὰρ ἔξωθεν ἡ ὑγρό-               </Unicode>
+        </TextEquiv>
+      </TextLine>
+      <TextLine id="r0l18">
+        <Coords points="47,696 512,696 512,729 47,729" />
+        <Word id="r0l18w145">
+          <Coords points="47,709 73,709 73,725 47,725" />
+          <TextEquiv>
+            <Unicode>της,</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l18w146">
+          <Coords points="80,705 194,705 194,728 80,728" />
+          <TextEquiv>
+            <Unicode>εὐχυμότερα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l18w147">
+          <Coords points="204,706 243,706 243,728 204,728" />
+          <TextEquiv>
+            <Unicode>ποιεῖ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l18w148">
+          <Coords points="252,705 281,705 281,729 252,729" />
+          <TextEquiv>
+            <Unicode>καὶ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l18w149">
+          <Coords points="286,700 411,700 411,726 286,726" />
+          <TextEquiv>
+            <Unicode>τροφιμώτερα</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l18w150">
+          <Coords points="415,698 440,698 440,720 415,720" />
+          <TextEquiv>
+            <Unicode>τῷ</Unicode>
+          </TextEquiv>
+        </Word>
+        <Word id="r0l18w151">
+          <Coords points="441,696 512,696 512,721 441,721" />
+          <TextEquiv>
+            <Unicode>χαλᾶσθαι</Unicode>
+          </TextEquiv>
+        </Word>
+        <TextEquiv>
+          <Unicode>της, εὐχυμότερα ποιεῖ καὶ τροφιμώτερα τῷ χαλᾶσθαι</Unicode>
+        </TextEquiv>
+      </TextLine>
+    </TextRegion>
+  </Page>
+</PcGts>
