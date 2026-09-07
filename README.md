@@ -81,3 +81,13 @@ XF53           EPARCHOS             26.19%      82.69%
 XF53           XF53                  9.60%      45.73%
 EPARCHOS+XF53  EPARCHOS              5.50%      25.99%
 EPARCHOS+XF53  XF53                  8.10%      40.14%
+
+
+python detect_lines.py
+
+python create_segmentation_dataset.py
+python create_segmentation_splits
+python train_segmentation.py
+python compare_segmentation.py
+
+python ocr_example.py
